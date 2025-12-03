@@ -11,7 +11,7 @@ public class PerishableParcel extends Parcel {
         this.timeToLive = timeToLive;
     }
 
-    boolean isExpired(int currentDay) {
+    public boolean isExpired(int currentDay) {
         return sendDay + timeToLive >= currentDay;
     }
 

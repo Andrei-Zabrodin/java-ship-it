@@ -23,7 +23,8 @@ class ParcelBoxTest {
                 4);
         box.addParcel(standardParcel);
 
-        boolean actualResult = box.parcelBox.contains(standardParcel);
+        //теперь в коробке должно быть две посылки
+        boolean actualResult = box.parcelBox.contains(standardParcel) && box.parcelBox.contains(parcel);
 
         assertTrue(actualResult);
     }
@@ -34,7 +35,8 @@ class ParcelBoxTest {
                 4);
         box.addParcel(standardParcel);
 
-        boolean actualResult = box.parcelBox.contains(standardParcel);
+        //теперь в коробке должно быть две посылки
+        boolean actualResult = box.parcelBox.contains(standardParcel) && box.parcelBox.contains(parcel);
 
         assertTrue(actualResult);
     }

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParcelBox<T extends Parcel> {
-    int maxWeight;
-    int currentWeight = 0;
+    private int maxWeight;
+    private int currentWeight = 0;
 
     List<T> parcelBox = new ArrayList<>();
 
@@ -27,11 +27,7 @@ public class ParcelBox<T extends Parcel> {
         return newWeight > maxWeight;
     }
 
-    public void getAllParcels() {
-        System.out.println("В коробке есть следующие посылки:");
-        for (T parcel: parcelBox) {
-            System.out.println(parcel.description);
-        }
-        System.out.println("");
+    public List<T> getAllParcels() {
+        return parcelBox;
     }
 }
